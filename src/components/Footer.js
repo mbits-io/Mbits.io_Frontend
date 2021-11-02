@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import JoinUsModel from "./JoinUsModel";
 
 export default function Footer() {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
     <footer className="footer_panel">
       <div className="new_wave_down">
@@ -76,7 +78,7 @@ v44h-352z"
                           <button
                             className="btn"
                             type="button"
-                            // onClick="showMailPopup();"
+                            onClick={() => setModalShow(true)}
                           >
                             Join our mailing List
                           </button>
@@ -155,6 +157,11 @@ v44h-352z"
                 </li>
               </ul>
             </div>
+
+            <JoinUsModel
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
 
             <div className="col-lg-4 col-md-4">
               <div className="text_f_l_h">
