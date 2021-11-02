@@ -1,10 +1,12 @@
 import React from "react";
 
+import JoinUsModel from "./JoinUsModel";
 import logo from "../assets/img/logo.gif";
 import logo2 from "../assets/img/logo2.gif";
 import homeimg from "../assets/img/home-img.png";
 
 export default function Home() {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="content-section baner_top_sec" id="top">
       <div className="container">
@@ -67,6 +69,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <JoinUsModel
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
+
             <div className="sub_sec_he"></div>
             <form method="post" id="subsform">
               <div className="newsletter ddfd">
@@ -82,7 +90,7 @@ export default function Home() {
                     <span className="input-group-btn">
                       <button
                         className="btn"
-                        // onClick="showMailPopup();"
+                        onClick={() => setModalShow(true)}
                         type="button"
                       >
                         Join our mailing List

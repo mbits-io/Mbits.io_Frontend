@@ -6816,3 +6816,23 @@ animation: fadeInDown 0.9s;padding: 0px !important;     height: 50px !important;
 .pinch-zoom-image {
  margin: 0 auto;
 }
+
+.modal {
+  opacity: inherit;
+  background: none;
+  margin: 100px auto;
+  width: 610px;
+}
+
+.close-icon {
+  margin-left: 60%;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #c45e72;
+  width: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  text-align: center;
+  color: wheat;
+  cursor: pointer;
+}
